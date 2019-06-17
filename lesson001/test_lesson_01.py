@@ -32,7 +32,7 @@ def zone_list():
 
 @pytest.fixture()
 def country_list():
-    """Получаем список кодов стран и список названий стран из CSV-файла"""
+    """Получаем список названий стран из CSV-файла"""
     with open('country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
         country_list = [row[1] for row in read_csv]
@@ -42,7 +42,7 @@ def country_list():
 
 @pytest.fixture()
 def country_code_list():
-    """Получаем список кодов стран и список названий стран из CSV-файла"""
+    """Получаем список кодов стран из CSV-файла"""
     with open('country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
         country_code_list = [row[0] for row in read_csv]
