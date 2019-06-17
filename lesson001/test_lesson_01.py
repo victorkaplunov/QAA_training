@@ -36,7 +36,7 @@ def country_list():
     with open('country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
         country_list = [row[1] for row in read_csv]
-        print(country_list)
+        # print(country_list)
     return country_list
 
 
@@ -46,7 +46,7 @@ def country_code_list():
     with open('country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
         country_code_list = [row[0] for row in read_csv]
-        print(country_code_list)
+        # print(country_code_list)
     return country_code_list
 
 
