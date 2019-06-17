@@ -17,7 +17,7 @@ def result():
                           # proxies={"http": "43.229.72.214:52360"}
                           # proxies={"http": "114.198.135.250:3128"}
                           )
-    print(result.text)
+    # print(result.text)
     return result
 
 
