@@ -86,9 +86,9 @@ def test_country_code_field(result, country_code_list):
 
 
 def test_country_field(result, country_list):
-    """Check that country list contain a value of 'countryCode' field."""
+    """Check that country list contain a value of 'country' field."""
     assert (result.json()['country']) in country_list,\
-        "The value of field 'countryCode' not in the country list."
+        "The value of field 'country' not in the country list."
 
 
 def test_timezone(result, zone_list):
