@@ -18,7 +18,6 @@ def result():
                           # proxies={"http": "43.229.72.214:52360"}
                           # proxies={"http": "114.198.135.250:3128"}
                           )
-    # print(json.dumps(result.json(), indent=4, sort_keys=True))
     return result
 
 
@@ -37,7 +36,6 @@ def country_list():
     with open('country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
         country_list = [row[1] for row in read_csv]
-        # print(country_list)
     return country_list
 
 
@@ -47,7 +45,6 @@ def country_code_list():
     with open('country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
         country_code_list = [row[0] for row in read_csv]
-        # print(country_code_list)
     return country_code_list
 
 
