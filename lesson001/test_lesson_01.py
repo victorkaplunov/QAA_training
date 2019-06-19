@@ -59,7 +59,7 @@ def test_status_code(result, zone_list):
 def test_status(result):
     """Check the 'status' field."""
     assert (result.json()['status']) == 'success',\
-        "Значение поля status не равно строке 'success'"
+        "Value of 'status' field is not equal 'success'."
 
 
 def test_value_type(result):
