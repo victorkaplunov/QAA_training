@@ -6,7 +6,7 @@ import pytest
 import requests
 import re
 import csv
-"""Test of the web service ip-api.com, the test checks the default parameters of the JSON version."""
+"""Test of the web service ip-api.com. It checks the default parameters of the JSON version."""
 
 
 @pytest.fixture(scope='session')
