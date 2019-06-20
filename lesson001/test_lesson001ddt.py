@@ -41,20 +41,7 @@ def result(ip_address):
     ])
 def test_ddt(result, ip_address, data):
     """Compare data from examples JSON file and result."""
-    assert result.json()['as'] == data[ip_address]['as']
-    assert result.json()['city'] == data[ip_address]['city']
-    assert result.json()['country'] == data[ip_address]['country']
-    assert result.json()['countryCode'] == data[ip_address]['countryCode']
-    assert result.json()['isp'] == data[ip_address]['isp']
-    assert result.json()['lat'] == data[ip_address]['lat']
-    assert result.json()['lon'] == data[ip_address]['lon']
-    assert result.json()['org'] == data[ip_address]['org']
-    assert result.json()['query'] == data[ip_address]['query']
-    assert result.json()['region'] == data[ip_address]['region']
-    assert result.json()['regionName'] == data[ip_address]['regionName']
-    assert result.json()['status'] == data[ip_address]['status']
-    assert result.json()['timezone'] == data[ip_address]['timezone']
-    assert result.json()['zip'] == data[ip_address]['zip']
+    assert result.json() == data[ip_address]
 
 
 @pytest.mark.parametrize("ip_address", [
@@ -65,6 +52,4 @@ def test_ddt(result, ip_address, data):
     ])
 def test_ddt_negative(result, ip_address, data_negative):
     """Compare data from examples JSON file and result."""
-    assert result.json()['message'] == data_negative[ip_address]['message']
-    assert result.json()['query'] == data_negative[ip_address]['query']
-    assert result.json()['status'] == data_negative[ip_address]['status']
+    assert result.json() == data_negative[ip_address]
