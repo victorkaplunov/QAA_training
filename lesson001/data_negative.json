@@ -1,0 +1,18 @@
+{
+  "127.0.0.1": {
+    "message":"reserved range",
+    "query":"127.0.0.1",
+    "status":"fail"},
+  "192.168.0.1": {
+    "message": "private range",
+    "query": "192.168.0.1",
+    "status": "fail"},
+  "255.255.255.0": {
+    "message": "reserved range",
+    "query": "255.255.255.0",
+    "status": "fail"},
+  "169.254.0.1": {
+    "message": "reserved range",
+    "query": "169.254.0.1",
+    "status": "fail"}
+}
