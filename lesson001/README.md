@@ -2,6 +2,8 @@
 
 Examples of simple API autotests with Python and pytest.
 
+How to run: pytest -vv test_lesson_xx.py
+
 - test_lesson_01.py - basic test
 -	test_lesson_01ddt.py - example of Data Driven Testing (DDT) paradigme
 - country.csv - CSV file with country list
