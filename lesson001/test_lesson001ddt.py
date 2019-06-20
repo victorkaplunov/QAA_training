@@ -37,7 +37,6 @@ def result(ip_address):
     pytest.param("47.254.69.158", marks=pytest.mark.basic, id="Alibaba.com LLC"),
     pytest.param("43.229.72.214", marks=pytest.mark.basic, id='Kappa E-Ventures Private Limited'),
     pytest.param("114.198.135.250", marks=pytest.mark.basic, id='Globalreach'),
-
     ])
 def test_ddt(result, ip_address, data):
     """Compare data from examples JSON file and result."""
