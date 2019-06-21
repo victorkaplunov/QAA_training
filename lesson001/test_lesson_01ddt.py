@@ -30,8 +30,8 @@ def data_negative():
 
 @pytest.fixture()
 def result(ip_address):
-    """Get JSON with network parameters of the current client IP address.
-     To change the response, you can use proxy servers from the comments."""
+    """Get response with JSON with network parameters of the current
+    client IP address. Print JSON in console output"""
     
     result = requests.get('http://ip-api.com/json/' + ip_address)
     print(json.dumps(result.json(), indent=4))
