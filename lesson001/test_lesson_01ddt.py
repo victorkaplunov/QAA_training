@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 # -*- encoding=utf8 -*-
+
 import pytest
 import requests
 import json
+
 """Test of the web service ip-api.com, the test checks the default parameters of the JSON version."""
 
 
 @pytest.fixture(scope='session')
 def data():
     """Load examples from JSON"""
+    
     with open("data.json", 'r', encoding='utf8') as file:
         filedata = file.read()
         data = json.loads(filedata)
@@ -18,6 +21,7 @@ def data():
 @pytest.fixture(scope='session')
 def data_negative():
     """Load examples from JSON"""
+    
     with open("data_negative.json", 'r', encoding='utf8') as file:
         filedata = file.read()
         data = json.loads(filedata)
@@ -28,6 +32,7 @@ def data_negative():
 def result(ip_address):
     """Get JSON with network parameters of the current client IP address.
      To change the response, you can use proxy servers from the comments."""
+    
     result = requests.get('http://ip-api.com/json/' + ip_address)
     print(json.dumps(result.json(), indent=4))
     return result
@@ -40,6 +45,7 @@ def result(ip_address):
     ])
 def test_ddt(result, ip_address, data):
     """Compare data from examples JSON file and result."""
+    
     assert result.json() == data[ip_address]
 
 
@@ -51,4 +57,5 @@ def test_ddt(result, ip_address, data):
     ])
 def test_ddt_negative(result, ip_address, data_negative):
     """Compare data from examples JSON file and result."""
+    
     assert result.json() == data_negative[ip_address]
