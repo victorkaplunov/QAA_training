@@ -6,6 +6,9 @@ How to run: pytest -vv test_lesson_xx.py
 
 - test_lesson_01.py - basic test
 -	test_lesson_01ddt.py - example of Data Driven Testing (DDT) paradigme
-- country.csv - CSV file with country list
-- data.json - JSON file with data for DDT test
-- zone.csv - CSV file with list of time zones.
+- test_lesson_01fuzzy.py - Example of fuzzy testing and using JSON schema.
+
+- country.csv - CSV file with country list for test_lesson_01ddt.py
+- data.json - JSON file with data for DDT test for test_lesson_01ddt.py
+- zone.csv - CSV file with list of time zones for test_lesson_01ddt.py
+- json_schema.json - JSON schema for test_lesson_01fuzzy.py
