@@ -17,10 +17,10 @@ def ip_address():
 
     fake = Faker()
     fake.add_provider(internet)
-    return fake.ipv4()
+    return fake.ipv4_public()
 
 
-@pytest.mark.parametrize('execution_number', range(5))
+@pytest.mark.parametrize('execution_number', range(10))
 def test_fuzzy(execution_number, ip_address):
     """Repeat request ip-api.com with random IP address end check JSON
     from response with given JSON schema."""
