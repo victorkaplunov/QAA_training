@@ -2,8 +2,17 @@
 
 Examples of simple API autotests with Python and pytest.
 
-How to run: pytest -vv test_lesson_xx.py
-
+How to install dependencies:
+```
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
+How to run:
+```
+pytest -vv test_lesson_xx.py
+```
+Files description:
 - test_lesson_01.py - basic test
 -	test_lesson_01ddt.py - example of Data Driven Testing (DDT) paradigme
 - test_lesson_01fuzzy.py - Example of fuzzy testing and using JSON schema.
