@@ -2,7 +2,7 @@
 
 Examples of simple API autotests with Python and pytest.
 
-How to install dependencies:
+How to install dependencies. For Mac OS X:
 ```
 python3 -m venv env
 source env/bin/activate
