@@ -11,23 +11,22 @@ from faker.providers import internet
 import jsonschema
 
 
-@pytest.fixture()
+@pytest.fixture(params=list(range(5)))
 def ip_address():
     """Create random IP addresses."""
 
     fake = Faker()
     fake.add_provider(internet)
-    return fake.ipv4_public()
+    return iter([fake.ipv4_public()])
 
 
-@pytest.mark.parametrize('execution_number', range(10))
-def test_fuzzy(execution_number, ip_address):
+def test_1(ip_address):
     """Repeat request ip-api.com with random IP address end check JSON
     from response with given JSON schema."""
 
     with open('json_schema.json', 'r', encoding='utf8') as file:
         file_data = file.read()
-        
-    response = requests.get('http://ip-api.com/json/' + ip_address)
+
+    response = requests.get('http://ip-api.com/json/' + next(ip_address))
     print(json.dumps(response.json(), indent=4))
     assert jsonschema.validate(response.json(), json.loads(file_data)) is None
