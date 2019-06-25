@@ -14,5 +14,9 @@
   "169.254.0.1": {
     "message": "reserved range",
     "query": "169.254.0.1",
+    "status": "fail"},
+  "~!@#$%^&*()": {
+    "message": "invalid query",
+    "query": "~!@",
     "status": "fail"}
 }
