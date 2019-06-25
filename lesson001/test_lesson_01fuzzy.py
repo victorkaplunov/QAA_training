@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 # -*- encoding=utf8 -*-
-# pylint: disable=redefined-outer-name
-# pylint: disable=no-member
 
 """Test of web service ip-api.com. Example of fuzzy testing and using
 JSON schema. This test checks the default parameters of the JSON version."""
