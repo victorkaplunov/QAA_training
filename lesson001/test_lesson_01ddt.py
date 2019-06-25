@@ -54,7 +54,8 @@ def test_ddt(result, ip_address, data):
     pytest.param("127.0.0.1", marks=pytest.mark.basic, id='Localhost'),
     pytest.param("192.168.0.1", marks=pytest.mark.basic, id='Reserved private IPv4 network ranges'),
     pytest.param("255.255.255.0", marks=pytest.mark.basic, id='Subnet mask'),
-    pytest.param("169.254.0.1", marks=pytest.mark.basic, id='APIPA')
+    pytest.param("169.254.0.1", marks=pytest.mark.basic, id='APIPA'),
+    pytest.param("~!@#$%^&*()", marks=pytest.mark.basic, id='Incorrect symbols')
     ])
 def test_ddt_negative(result, ip_address, data_negative):
     """Compare data from examples JSON file and result."""
