@@ -15,7 +15,7 @@ pytest -vv test_lesson_xx.py
 Files description:
 - test_lesson_01.py - basic test
 -	test_lesson_01ddt.py - example of Data Driven Testing (DDT) paradigme
-- test_lesson_01fuzzy.py - Example of fuzzy testing and using JSON schema.
+- test_lesson_01fuzzy.py - example of fuzzy testing and using JSON schema.
 
 - country.csv - CSV file with country list for test_lesson_01ddt.py
 - data.json - JSON file with data for DDT test for test_lesson_01ddt.py
