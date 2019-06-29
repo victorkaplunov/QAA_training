@@ -8,21 +8,18 @@ import pytest
 import requests
 
 
-# String with all punctuation symbols
-SYMBOLS_STRING = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
-# Convert it to list
-i = iter(SYMBOLS_STRING)
-SYMBOL_LIST = [(next(i)) for e in range(len(SYMBOLS_STRING))]
+# List with all punctuation symbols
+SYMBOL_LIST = list(r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~""")
 
 
 @pytest.fixture(params=SYMBOL_LIST)
 def symbol_params():
-    """Create parametrized fixture for test_incorrect_symbol.
-    Parameter is the list of punctuation symbols."""
+    """Create parametrized fixture for test_incorrect_symbol."""
+
     return iter(SYMBOL_LIST)
 
 
-@pytest.mark.parametrize("symbol_params", symbol_params())
+@pytest.mark.parametrize("symbol_params", SYMBOL_LIST)
 def test_incorrect_symbol(symbol_params):
     """Repeat request ip-api.com with incorrect symbol end check response."""
 

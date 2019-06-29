@@ -11,8 +11,10 @@ from faker import Faker
 from faker.providers import internet
 import jsonschema
 
+REPEAT_COUNT = 5
 
-@pytest.fixture(params=list(range(5)))
+
+@pytest.fixture(params=list(range(REPEAT_COUNT)))
 def ip_address():
     """Create random IP addresses."""
 
@@ -21,7 +23,7 @@ def ip_address():
     return iter([fake.ipv4_public()])
 
 
-def test_1(ip_address):
+def test_fuzzy(ip_address):
     """Repeat request ip-api.com with random IP address end check JSON
     from response with given JSON schema."""
 
