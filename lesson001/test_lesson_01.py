@@ -33,7 +33,7 @@ def zone_list():
 
 @pytest.fixture()
 def country_list():
-    """Get a country list the CSV file"""
+    """Get a country list from the CSV file"""
 
     with open('country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
@@ -67,7 +67,8 @@ def test_status(result):
 def test_value_type(result):
     """
     Check a data type of value for the this JSON fields:
-    'as', 'city', 'isp', 'org' 'region' 'regionName' """
+    'as', 'city', 'isp', 'org' 'region' 'regionName'
+    """
 
     assert isinstance(result.json()['as'], str), "The value of field 'as' not a string."
     assert isinstance(result.json()['city'], str), "The value of field 'city' not a string."
@@ -79,10 +80,10 @@ def test_value_type(result):
 
 
 def test_country_code_field(result, country_code_list):
-    """Check that a value of 'countryCode' in the country code list."""
+    """Check that a value of 'countryCode' is present in the list of country codes."""
 
     assert result.json()['countryCode'] in country_code_list, \
-        "The value of field 'countryCode' not in the country code list."
+        "The value of field 'countryCode' not present in the list of country codes."
 
 
 def test_country_field(result, country_list):
@@ -100,7 +101,7 @@ def test_timezone(result, zone_list):
 
 
 def test_ip_adress(result):
-    """Check format of a 'query' (IP-address) field/"""
+    """Check format of a 'query' (IP-address) field by regular expression."""
 
     assert re.match(r'^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.)'
                     r'{3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$',
@@ -112,11 +113,11 @@ def test_lat(result):
     """Check that a value of the 'lat' field is in a given range."""
 
     assert -90 <= result.json()['lat'] <= 90, \
-        "Value of the 'lat' field is in a given range."
+        "Value of the 'lat' field is not in a given range."
 
 
 def test_lon(result):
     """Check that a value of the 'lon' field is in a given range."""
 
     assert -180 <= result.json()['lon'] <= 180, \
-        "Value of the 'lon' field is in a given range."
+        "Value of the 'lon' field is not in a given range."
