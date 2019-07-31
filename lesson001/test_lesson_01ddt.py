@@ -12,7 +12,7 @@ import json
 def data():
     """Load examples from JSON"""
     
-    with open("data.json", 'r', encoding='utf8') as file:
+    with open("lesson001/data.json", 'r', encoding='utf8') as file:
         filedata = file.read()
         data = json.loads(filedata)
         return data
@@ -22,7 +22,7 @@ def data():
 def data_negative():
     """Load examples from JSON"""
     
-    with open("data_negative.json", 'r', encoding='utf8') as file:
+    with open("lesson001/data_negative.json", 'r', encoding='utf8') as file:
         filedata = file.read()
         data = json.loads(filedata)
         return data
