@@ -25,7 +25,7 @@ def result():
 def zone_list():
     """Get a time zone list from the CSV file"""
 
-    with open('zone.csv') as csvfile:
+    with open('lesson001/zone.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
         zone_list = [row[2] for row in read_csv]
     return zone_list
