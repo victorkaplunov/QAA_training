@@ -9,4 +9,4 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - pytest /lesson001/test_lesson_01.py
+  - pytest -v lesson001/test_lesson_01.py
