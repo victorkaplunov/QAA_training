@@ -27,7 +27,7 @@ def test_fuzzy(ip_address):
     """Repeat request ip-api.com with random IP address end check JSON
     from response with given JSON schema."""
 
-    with open('json_schema.json', 'r', encoding='utf8') as file:
+    with open('lesson001/json_schema.json', 'r', encoding='utf8') as file:
         file_data = file.read()
 
     response = requests.get('http://ip-api.com/json/' + next(ip_address))
