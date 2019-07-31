@@ -35,7 +35,7 @@ def zone_list():
 def country_list():
     """Get a country list from the CSV file"""
 
-    with open('country.csv') as csvfile:
+    with open('lesson001/country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
         country_list = [row[1] for row in read_csv]
     return country_list
@@ -45,7 +45,7 @@ def country_list():
 def country_code_list():
     """Get a country codes the CSV file."""
 
-    with open('country.csv') as csvfile:
+    with open('lesson001/country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
         country_code_list = [row[0] for row in read_csv]
     return country_code_list
