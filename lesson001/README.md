@@ -1,6 +1,6 @@
 # Lesson 001
 
-Examples of simple API autotests with Python and pytest.
+Examples of simple API autotests with Python and pytest. Builds for this test are available at https://travis-ci.com/victorkaplunov/QAA_training
 
 How to install dependencies:
 ```
