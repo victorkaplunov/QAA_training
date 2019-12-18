@@ -43,7 +43,7 @@ def country_list():
 
 @pytest.fixture()
 def country_code_list():
-    """Get a country codes the CSV file."""
+    """Get a country codes from the CSV file."""
 
     with open('lesson001/country.csv') as csvfile:
         read_csv = csv.reader(csvfile, delimiter=',')
